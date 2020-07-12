@@ -1,24 +1,26 @@
 import React, { useState } from "react";
-import { Moment } from "moment";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import "antd/dist/antd.css";
-
-import { DatePicker, message } from "antd";
+import Header from "./molecule/Header";
+import Menu from "./molecule/Menu";
+import Search from "./pages/Search";
+import List from "./pages/List";
+import Flex from "./atom/Flex";
 
 function App(): React.ReactElement {
-  const [date, setDate] = useState<Moment>();
-  const handleChange = (value: Moment | null): void => {
-    message.info(
-      `Selected Date: ${value ? value.format("YYYY-MM-DD") : "None"}`
-    );
-    setDate(value || undefined);
-  };
+  const [collaspe, setCollaspe] = useState<boolean>();
   return (
-    <div style={{ width: 400, margin: "100px auto" }}>
-      <DatePicker onChange={handleChange} />
-      <div style={{ marginTop: 16 }}>
-        Selected Date: {date ? date.format("YYYY-MM-DD") : "None"}
-      </div>
+    <div>
+      <Router>
+        <Header />
+        <Flex>
+          <Menu />
+          <Route exact path="/" component={Search} />
+          <Route exact path="/search" component={Search} />
+          <Route path="/list" component={List} />
+        </Flex>
+      </Router>
     </div>
   );
 }
