@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import "antd/dist/antd.css";
@@ -9,7 +9,6 @@ import List from "./pages/List";
 import Flex from "./atom/Flex";
 
 function App(): React.ReactElement {
-  const [collaspe, setCollaspe] = useState<boolean>();
   return (
     <div>
       <Router>
