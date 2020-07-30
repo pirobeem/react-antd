@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { DatePicker, Input } from "antd";
+import { Input } from "antd";
 import Flex from "../atom/Flex";
 import DateRange from "../molecule/DateRange";
 
@@ -16,7 +16,7 @@ const Box = styled.div`
 `;
 
 export default class Search extends React.Component {
-  render() {
+  render(): JSX.Element {
     return (
       <SearchDiv>
         <Flex>

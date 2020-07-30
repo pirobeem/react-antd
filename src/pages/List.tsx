@@ -1,7 +1,7 @@
 import React from "react";
 
 export default class List extends React.Component {
-  render() {
+  render(): JSX.Element {
     return <div>List</div>;
   }
 }
