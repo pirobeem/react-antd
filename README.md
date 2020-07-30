@@ -1,10 +1,12 @@
-This project is for trying to use react + [antd](https://ant.design/docs/react/getting-started)
+# This project is reflection tools.
 
-## Available Scripts
-- [x] antd date picker
-- [x] antd menu
-- [x] antd input
-- [ ] antd button
-- [ ] antd list
-- [ ] antd tile
-- [ ] customize something
+## Reflection Tools
+- [ ] show questions
+- [ ] start and stop questions
+- [ ] save on local storage about past selection
+- [ ] edit question page
+- [ ] add selections
+- [ ] remove selections
+- [ ] search selections
+- [ ] introduction about install
+- [ ] introduction message on README.md
